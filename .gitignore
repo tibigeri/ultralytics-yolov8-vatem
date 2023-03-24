@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#vatem
+.idea/
+vatem/dataset/*
+
 # C extensions
 *.so
 
