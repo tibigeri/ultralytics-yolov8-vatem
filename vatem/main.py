@@ -9,10 +9,9 @@ if __name__ == '__main__':
 
      # Load a model
      #model = YOLO('yolov8n.yaml')  # build a new model from scratch
-     model = YOLO(model="yolov8n-pose.pt", task = "pose")  # load a pretrained model (recommended for training)
+     model = YOLO(model="yolov8n.pt", task = "pose")  # load a pretrained model (recommended for training)
+     results = model.train(data="coco-vatem.yaml", epochs=700)  # train the model
 
-     # Use the model
-     results = model.train(data="coco-vatem.yaml", epochs=3)  # train the model
 
      #results = model.val()  # evaluate model performance on the validation set
      #results = model('https://ultralytics.com/images/bus.jpg')  # predict on an image
